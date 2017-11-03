@@ -1,0 +1,37 @@
+    <!DOCTYPE html>  
+    <html>  
+    <body>  
+    <h1>Important Note2</h1>  
+    <div>  
+    <b>To:</b> <span id="to"></span><br>  
+    <b>From:</b> <span id="from"></span><br>  
+    <b>Message:</b> <span id="message"></span>  
+    </div>  
+    <script>  
+    txt1="<note>";    
+    txt2="<to>Sheikh Mojib</to>";    
+    txt3="<from>Serena William</from>";    
+    txt4="<body>Don't forget me this weekend!</body>";    
+    txt5="</note>";    
+    txt=txt1+txt2+txt3+txt4+txt5;  
+      
+    if (window.DOMParser)  
+      {  
+      parser=new DOMParser();  
+      xmlDoc=parser.parseFromString(txt,"text/xml");  
+      }  
+    else // Internet Explorer  
+      {  
+      xmlDoc=new ActiveXObject("Microsoft.XMLDOM");  
+      xmlDoc.async=false;  
+      xmlDoc.loadXML(txt);  
+      }  
+    document.getElementById("to").innerHTML=  
+    xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;  
+    document.getElementById("from").innerHTML=  
+    xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;  
+    document.getElementById("message").innerHTML=  
+    xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;  
+    </script>  
+    </body>  
+    </html>  
