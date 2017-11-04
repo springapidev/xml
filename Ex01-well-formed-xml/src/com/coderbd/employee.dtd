@@ -20,7 +20,6 @@
 -->
 
 <!--- Put your DTDDoc comment here. -->
-<!--Parsed Character Data (PCDATA)-->
 <!ELEMENT employee (firstname|lastname|email)*>
 
 <!--- Put your DTDDoc comment here. -->
