@@ -16,7 +16,7 @@
       {// code for IE6, IE5  
       xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
       }  
-    xmlhttp.open("GET","note.xml",false);  
+    xmlhttp.open("GET","note.xml",true);  
     xmlhttp.send();  
     xmlDoc=xmlhttp.responseXML;  
     document.getElementById("to").innerHTML=  

@@ -64,7 +64,7 @@ public class ReadXMLFileUsingSax {
 
      };
 
-       saxParser.parse("E:\\git\\xml\\Ex01-well-formed-xml\\src\\com\\coderbd\\readusingsax/staff.xml", handler);
+       //saxParser.parse("E:\\git\\xml\\Ex01-well-formed-xml\\src\\com\\coderbd\\readusingsax/staff.xml", handler);
 
      } catch (Exception e) {
        e.printStackTrace();
