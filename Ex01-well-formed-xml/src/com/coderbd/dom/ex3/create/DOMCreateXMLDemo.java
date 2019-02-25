@@ -1,4 +1,3 @@
-
 package com.coderbd.dom.ex3.create;
 
 import java.io.File;
@@ -16,67 +15,67 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 public class DOMCreateXMLDemo {
-public static void main(String argv[]) {
 
-	  try {
+    public static void main(String argv[]) {
 
-		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+        try {
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+            // root elements
+            Document doc = docBuilder.newDocument();
+            Element rootElement = doc.createElement("company");
+            doc.appendChild(rootElement);
+            // staff elements
+            Element staff = doc.createElement("Staff");
+            rootElement.appendChild(staff);
+            // set attribute to staff element
+            Attr attr = doc.createAttribute("id");
+            attr.setValue("1000");
+            staff.setAttributeNode(attr);
 
-		// root elements
-		Document doc = docBuilder.newDocument();
-		Element rootElement = doc.createElement("company");
-		doc.appendChild(rootElement);
+            // shorten way
+            // staff.setAttribute("id", "1");
+            // firstname elements
+            Element firstname = doc.createElement("firstname");
+            firstname.appendChild(doc.createTextNode("Minhaz"));
+            staff.appendChild(firstname);
 
-		// staff elements
-		Element staff = doc.createElement("Staff");
-		rootElement.appendChild(staff);
+            // lastname elements
+            Element lastname = doc.createElement("lastname");
+            lastname.appendChild(doc.createTextNode("Rahman"));
+            staff.appendChild(lastname);
 
-		// set attribute to staff element
-		Attr attr = doc.createAttribute("id");
-		attr.setValue("1");
-		staff.setAttributeNode(attr);
+            // nickname elements
+            Element nickname = doc.createElement("nickname");
+            nickname.appendChild(doc.createTextNode("Minhaz"));
+            staff.appendChild(nickname);
 
-		// shorten way
-		// staff.setAttribute("id", "1");
+            // salary elements
+            Element salary = doc.createElement("salary");
+            salary.appendChild(doc.createTextNode("100000"));
+            staff.appendChild(salary);
+            
+              // salary elements
+            Element country = doc.createElement("country");
+            country.appendChild(doc.createTextNode("BD"));
+            staff.appendChild(country);
 
-		// firstname elements
-		Element firstname = doc.createElement("firstname");
-		firstname.appendChild(doc.createTextNode("Shariar"));
-		staff.appendChild(firstname);
+            // write the content into xml file
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(doc);
+            StreamResult result = new StreamResult(new File("D:\\git\\xml\\Ex01-well-formed-xml\\src\\com\\coderbd\\dom\\ex3\\create\\ex2.xml"));
 
-		// lastname elements
-		Element lastname = doc.createElement("lastname");
-		lastname.appendChild(doc.createTextNode("Islam"));
-		staff.appendChild(lastname);
+            // Output to console for testing
+            // StreamResult result = new StreamResult(System.out);
+            transformer.transform(source, result);
 
-		// nickname elements
-		Element nickname = doc.createElement("nickname");
-		nickname.appendChild(doc.createTextNode("Topper"));
-		staff.appendChild(nickname);
+            System.out.println("File saved!");
 
-		// salary elements
-		Element salary = doc.createElement("salary");
-		salary.appendChild(doc.createTextNode("100000"));
-		staff.appendChild(salary);
-
-		// write the content into xml file
-		TransformerFactory transformerFactory = TransformerFactory.newInstance();
-		Transformer transformer = transformerFactory.newTransformer();
-		DOMSource source = new DOMSource(doc);
-		StreamResult result = new StreamResult(new File("E:\\git\\xml\\Ex01-well-formed-xml\\src\\com\\coderbd\\dom\\ex3\\create\\ex2.xml"));
-
-		// Output to console for testing
-		// StreamResult result = new StreamResult(System.out);
-
-		transformer.transform(source, result);
-
-		System.out.println("File saved!");
-
-	  } catch (ParserConfigurationException pce) {
-		pce.printStackTrace();
-	  } catch (TransformerException tfe) {
-		tfe.printStackTrace();
-	  }
-	}
+        } catch (ParserConfigurationException pce) {
+            pce.printStackTrace();
+        } catch (TransformerException tfe) {
+            tfe.printStackTrace();
+        }
+    }
 }

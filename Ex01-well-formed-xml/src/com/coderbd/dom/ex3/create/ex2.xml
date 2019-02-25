@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><company>
-    <Staff id="1">
+    <Staff id="100">
+        <firstname>Minhaz</firstname>
+        <lastname>Rahman</lastname>
+        <nickname>Minhaz</nickname>
+        <salary>200000.0</salary>
+        <country>BD</country>
+    </Staff>
+    <Staff id="101">
+        <firstname>Megedee</firstname>
+        <lastname>Hasan</lastname>
+        <nickname>Shuvo</nickname>
+        <salary>500000.0</salary>
+        <country>INDIA</country>
+    </Staff>
+    <Staff id="102">
         <firstname>Shariar</firstname>
-        <lastname>Islam</lastname>
-        <nickname>Topper</nickname>
-        <salary>100000</salary>
+        <lastname>Hasan</lastname>
+        <nickname>Shetu</nickname>
+        <salary>300000.0</salary>
+        <country>China</country>
+    </Staff>
+    <Staff id="103">
+        <firstname>Yasin</firstname>
+        <lastname>Rahman</lastname>
+        <nickname>arif</nickname>
+        <salary>10000.0</salary>
+        <country>BD</country>
+    </Staff>
+    <Staff id="104">
+        <firstname>Tahmina</firstname>
+        <lastname>Begum</lastname>
+        <nickname>Tahmina</nickname>
+        <salary>500000.0</salary>
+        <country>Australia</country>
+    </Staff>
+    <Staff id="105">
+        <firstname>Sumaya</firstname>
+        <lastname>Akter</lastname>
+        <nickname>Sumaya</nickname>
+        <salary>300000.0</salary>
+        <country>USA</country>
     </Staff>
 </company>

@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class>
+<idbclass>
+   <student rollno = "100">
+      <firstname>Mortoza</firstname>
+      <lastname>Ahmed</lastname>
+      <nickname>Golam</nickname>
+      <marks>85</marks>
+   </student>
+   
+   <student rollno = "110">
+      <firstname>Mahbub</firstname>
+      <lastname>Rahman</lastname>
+      <nickname>Shakil</nickname>
+      <marks>95</marks>
+   </student>
+   
+   <student rollno = "120">
+      <firstname>Arefin</firstname>
+      <lastname>Safayet</lastname>
+      <nickname>Kirkira</nickname>
+      <marks>90</marks>
+   </student>
    <student rollno = "393">
       <firstname>dinkar</firstname>
       <lastname>kad</lastname>
@@ -20,4 +40,4 @@
       <nickname>jazz</nickname>
       <marks>90</marks>
    </student>
-</class>
+</idbclass>

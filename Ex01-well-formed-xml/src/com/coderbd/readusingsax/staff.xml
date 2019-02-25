@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <company>
-	<staff>
-            <fullname>Atik</fullname>
-		<salary>300000</salary>
-	</staff>
-	
+    <staff>
+        <fullname>Jobayer</fullname>
+        <salary>300000</salary>
+    </staff>  
 </company>
